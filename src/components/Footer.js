@@ -12,7 +12,15 @@ function Footer() {
   let year = date.getFullYear();
   let hour = date.getHours();
   let minute = date.getMinutes();
-  let time = hour +':'+minute;
+  function addZero(hour)
+  {
+    if(hour < 10)
+    {
+      hour = "0" + hour;
+    }
+    return hour;
+  }
+  let time = addZero(hour) +':'+minute;
   return (
     <Container fluid className="footer">
       <Row>

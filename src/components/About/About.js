@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import Techstack from "./TechStack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../assets/about.png";
 import Toolstack from "./ToolStack";
+import { Link } from "react-router-dom";
+import { CgFileDocument } from "react-icons/cg";
+import { saveAs } from "file-saver";
+
+
 
 function About() {
+  const saveFile = () => {
+    saveAs(
+      "https://drive.google.com/file/d/1-zFUYDh-CLtgb3IbhQkAOzCbsk14nRKQ/view?usp=sharing",
+      "test.pdf"
+    );
+  };
   return (
     <Container fluid className="about-section">
     <Particle />
@@ -42,7 +54,7 @@ function About() {
       <h1 className="project-heading">
         <strong className="purple">Tools</strong> I use
       </h1>
-      <Toolstack />
+      <Toolstack />              
 
     </Container>
   </Container>

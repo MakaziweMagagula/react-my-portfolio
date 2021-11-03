@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
+import { saveAs } from "file-saver";
 import {
   AiFillStar,
   AiOutlineHome,
@@ -30,6 +31,13 @@ function NavBar() {
 
   window.addEventListener("scroll", scrollHandler);
 
+  const saveFile = () => {
+    saveAs(
+      "https://drive.google.com/file/d/1-zFUYDh-CLtgb3IbhQkAOzCbsk14nRKQ/view?usp=sharing",
+      "test.pdf"
+    );
+  };
+
   return (
     <Navbar
       expanded={expand}
@@ -38,9 +46,6 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/">
-          <img src={logo} className="img-fluid logo" alt="brand" />
-        </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -82,20 +87,17 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/resume"
-                onClick={() => updateExpanded(false)}
+            <Nav.Item className="fork-btn">
+              <Button
+                onClick = {saveFile}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> 
-                Resume
-              </Nav.Link>
+                Download CV
+              </Button>
             </Nav.Item>
 
             <Nav.Item className="fork-btn">
               <Button
-                href="https://github.com/soumyajit4419/Portfolio"
+                href="https://github.com/MakaziweMagagula/react-my-portfolio"
                 target="_blank"
                 className="fork-btn-inner"
               >

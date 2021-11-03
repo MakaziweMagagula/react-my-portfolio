@@ -17,8 +17,8 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Col
-          md={5}
-          style={{ paddingTop: "50px", paddingBottom: "50px", paddingLeft:"50px"}}
+          md={12}
+          style={{paddingLeft:"50px"}}
           className="about-img"
         >
           <img src={constructionImg} alt="about" className="img-fluid" />

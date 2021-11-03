@@ -1,30 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
-import Particle from "../Particle";
-import Resumecontent from "./ResumeContent";
-import axios from "axios";
-import pdf from "../../assets/Makaziwe Blessing Magagula_Resume (New).pdf";
-import { AiOutlineDownload } from "react-icons/ai";
+import React from 'react';
 
-function Resume() {
-  
+export const Form = ({ onSubmit }) => {
   return (
-    <Container fluid className="resume-section">
-      <Particle />
-      <Container>
-      <h1 className="project-heading">
-          Request My CV
-        </h1>
-        <Row >
-           
-           <Resumecontent/>
-         
-        </Row>
-        
-      </Container>
-    </Container>
+    <form onSubmit={onSubmit}>
+      <div className="form-group">
+        <label htmlFor="name">Name</label>
+        <input className="form-control" id="name" />
+      </div>
+      <div className="form-group">
+        <label htmlFor="email">Email address</label>
+        <input
+          type="email"
+          className="form-control"
+          id="email"
+          placeholder="name@example.com"
+        />
+      </div>
+      <div className="form-group">
+        <button className="form-control btn btn-primary" type="submit">
+          Submit
+        </button>
+      </div>
+    </form>
   );
-}
-
-export default Resume;
+};
+export default Form;
