@@ -1,16 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import Techstack from "./TechStack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../assets/about.png";
 import Toolstack from "./ToolStack";
-import { Link } from "react-router-dom";
-import { CgFileDocument } from "react-icons/cg";
 import { saveAs } from "file-saver";
-
-
 
 function About() {
   const saveFile = () => {
