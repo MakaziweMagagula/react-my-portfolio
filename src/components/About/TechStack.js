@@ -9,7 +9,6 @@ import {
   SiGit,
   SiReact
 } from "react-icons/si";
-import { SiPytorch, SiTensorflow, SiFirebase } from "react-icons/si";
 
 function Techstack() {
   return (

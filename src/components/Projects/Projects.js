@@ -1,9 +1,7 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import constructionImg from "../../assets/construction.png";
-
-
 
 function Projects() {
   return (

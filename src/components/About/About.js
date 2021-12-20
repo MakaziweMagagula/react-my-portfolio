@@ -5,15 +5,8 @@ import Techstack from "./TechStack";
 import Aboutcard from "./AboutCard";
 import laptopImg from "../../assets/about.png";
 import Toolstack from "./ToolStack";
-import { saveAs } from "file-saver";
 
 function About() {
-  const saveFile = () => {
-    saveAs(
-      "https://drive.google.com/file/d/1-zFUYDh-CLtgb3IbhQkAOzCbsk14nRKQ/view?usp=sharing",
-      "test.pdf"
-    );
-  };
   return (
     <Container fluid className="about-section">
     <Particle />
