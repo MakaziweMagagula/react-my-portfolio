@@ -555,7 +555,8 @@ html {
   }
   
   .tech-icons {
-    font-size: 4.5em !important;
+    font-size: 3.5em !important;
+    font-family: Arial;
     margin: 15px !important;
     padding: 10px !important;
     opacity: 0.93 !important;
